@@ -57,14 +57,11 @@ App.omdbApiSync = function(type) {
     findQueryOptions: {},
     base_url: 'http://www.omdbapi.com/',
     find: function(id, process) {
-      var q = {}, _munge = this.munge, _primaryKey = this.primaryKey, _type = this.type;
+      var q = {}, _munge = this.munge, _type = this.type;
       q['i'] = id;
-      // debugger; // why is process 'undefined'
       $.getJSON(this.base_url, Ember.$.extend({}, q, this.findQueryOptions)).then(function(result) {
         process(result)
-          .primaryKey(_primaryKey)
           .camelizeKeys()
-          .applyTransforms(_type)
           .munge(_munge)
           .load();
       });
@@ -91,9 +88,14 @@ App.Movie = DS.Model.extend({
   poster: attr('string'),
   imdbRating: attr('number'),
   imdbVotes: attr('number'),
-  imdbID: attr('string')
+  imdbID: attr('string'),
+  primaryKey: function(){
+    return Ember.get('imdbID');
+  }
 });
 
 App.Movie.sync = App.omdbApiSync('movie');
-App.Movie.sync.primaryKey = 'imdbID';
 App.Movie.sync.findQueryOptions = { tomatoes: true, plot: 'full' }
+App.Movie.sync.munge = function(json){
+  json.id = json.imdbID;
+}
