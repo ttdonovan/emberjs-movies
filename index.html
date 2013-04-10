@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <title>Movies Built With Ember.js</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/app.css" type="text/css" media="screen">
+</head>
+<body>
+  <script type="text/x-handlebars">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">Movies</a>
+        <ul class="nav">
+        <!--
+          <li class="divider-vertical"></li>
+          <li><a href="#">Link 1</a></li>
+          <li class="divider-vertical"></li>
+          <li><a href="#">Link 2</a></li>
+          <li class="divider-vertical"></li>
+        -->
+        </ul>
+      </div>
+    </div>
+
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="search">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="well span4">
+          <ul class="nav nav-list">
+            <li class="nav-header">FIND MOVIES</li>
+            <li>
+              {{view App.SearchMovieView}}
+            </li>
+            <li class="divider"></li>
+            <li>master</li>
+          </ul>
+        </div>
+        <div class="span8">
+          detail
+          {{outlet}}
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="search_movies">
+    <div class="input-append">
+      {{view Ember.TextField valueBinding="view.queryString" classNames="search-query span10"}}
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="movies">
+    movies template
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="movies/index">
+    <strong>select a movie</strong>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="movie">
+    movie template
+  </script>
+
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0-rc.3.js"></script>
+  <script src="js/libs/ember-1.0.0-rc.2.js"></script>
+  <!-- <script src="js/libs/ember.js"></script> -->
+  <script src="js/libs/ember-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
