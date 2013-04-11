@@ -12,6 +12,11 @@ and the [The Open Movie Database API](http://www.omdbapi.com/).
 ## References
 
 * Many thanks to [Ember Data and the Meetup API](http://blog.mrloop.com/blog/2013/04/07/ember-data-and-the-meetup-api/) for the **Sync Object**
+* Simple example of **Master/Detail Views** [Master/Detail Views with Ember.js](http://broadcastingadam.com/2013/03/master-detail-views-with-ember/)
+
+## Debugging
+
+* App.Router.router.recognizer.names
 
 ## TODOs
 
