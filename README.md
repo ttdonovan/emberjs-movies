@@ -20,7 +20,8 @@ and the [The Open Movie Database API](http://www.omdbapi.com/).
 
 ## TODOs
 
-* cleanup index.html handlebars templates and make the app look pretty
-* review the app.js routes, uncertain if 'search' and 'movies/movie' nested resources are correct
 * added an example of best practices with modal windows
 * add an example of best practices with pagination
+* add an example of spinner for $.ajax requests
+* is it possible to cache App.Movie using the 'response' property
+* make app fail gracefully if sending a bad URL i.e. /#/movies/foo/bar
