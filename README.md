@@ -1,8 +1,10 @@
-# Movies
+# 'Movies' an app build with Ember.js and Ember CLI
 
-This README outlines the details of collaborating on this Ember application.
-
-A short introduction of this app could easily go here.
+This is an example application built with [Ember.js](http://emberjs.com/)
+and [Ember CLI](http://www.ember-cli.com/)
+and the [The Open Movie Database API](http://www.omdbapi.com/). The goal
+of the project is to explore best practises for building an Ember appliation.
+Review the `CHANGELOG.md` for detailed journal entries of changes.
 
 ## Prerequisites
 
@@ -13,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/ttdonovan/emberjs-movies.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
