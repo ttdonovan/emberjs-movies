@@ -1,3 +1,23 @@
-<h2 id='title'>Welcome to Ember.js</h2>
-
-{{outlet}}
+<header role="banner">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        {{link-to 'Movies' 'application' classNames='navbar-brand'}}
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container-fluid" role="main">
+  <div class="row">
+    {{outlet}}
+  </div>
+</div>
+<footer class="navbar navbar-default navbar-fixed-bottom" role="contentinfo">
+  <div class="container-fluid">
+    <div class="navbar-inner">
+      <p class="text-right text-muted">
+        <small>This site is not endorsed by or affiliated with IMDb.com</small>
+      </p>
+    </div>
+  </div>
+</footer>
