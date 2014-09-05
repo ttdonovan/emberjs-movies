@@ -5,6 +5,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('movies');
+
   this.route('not-found', { path: '/*wildcard' });
 });
 
