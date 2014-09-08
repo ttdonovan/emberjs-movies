@@ -5,8 +5,8 @@
         {{link-to 'Movies' 'application' classNames='navbar-brand'}}
       </div>
       <form class="navbar-form navbar-right">
-        {{input value=q classNames='form-control' placeholder='Search for movies'}}
-        <button class="btn btn-primary" {{action 'search' q}}>Search</button>
+        {{input value=keywords classNames='form-control' placeholder='Search for movies'}}
+        <button class="btn btn-primary" {{action 'search' keywords}}>Search</button>
       </form>
     </div>
   </nav>
