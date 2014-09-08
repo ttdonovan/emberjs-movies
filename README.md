@@ -6,6 +6,10 @@ and the [The Open Movie Database API](http://www.omdbapi.com/). The goal
 of the project is to explore best practises for building an Ember appliation.
 Review the `CHANGELOG.md` for detailed journal entries of changes.
 
+Live example:
+
+* [http://emberjs-movies.herokuapp.com](http://emberjs-movies.herokuapp.com)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
