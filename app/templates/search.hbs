@@ -1,7 +1,29 @@
-<ul class="list-group">
-  {{#each}}
-    <li class="list-group-item">{{title}} ({{year}})</li>
-  {{else}}
-    <li class="list-group-item"><strong>No search results found.</strong></li>
-  {{/each}}
-</ul>
+<div class="row">
+  <div class="col-md-5">
+    <div class="list-group">
+      {{#each movie in controller}}
+        <a class="list-group-item" {{action 'selectMovie' movie on='mouseEnter'}}>
+          {{movie.title}} ({{movie.year}})
+        </a>
+      {{else}}
+        <div class="list-group-item"><strong>No search results found.</strong></div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="col-md-7">
+    {{#if selectedMovie}}
+      <div class="well well-lg">
+        <h3>{{selectedMovie.title}}</h3>
+
+        <dl>
+          <dt>IMDb</dt>
+          <dd>{{selectedMovie.id}}</dd>
+          <dt>Year</dt>
+          <dd>{{selectedMovie.year}}</dd>
+          <dt>Type</dt>
+          <dd>{{selectedMovie.type}}</dd>
+        </dl>
+      </div>
+    {{/if}}
+  </div>
+</div>
