@@ -1,5 +1,7 @@
 <ul class="list-group">
   {{#each}}
     <li class="list-group-item">{{title}} ({{year}})</li>
+  {{else}}
+    <li class="list-group-item"><strong>No search results found.</strong></li>
   {{/each}}
 </ul>

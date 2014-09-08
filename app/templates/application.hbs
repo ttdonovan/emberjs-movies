@@ -4,6 +4,10 @@
       <div class="navbar-header">
         {{link-to 'Movies' 'application' classNames='navbar-brand'}}
       </div>
+      <form class="navbar-form navbar-right">
+        {{input value=q classNames='form-control' placeholder='Search for movies'}}
+        <button class="btn btn-primary" {{action 'search' q}}>Search</button>
+      </form>
     </div>
   </nav>
 </header>
