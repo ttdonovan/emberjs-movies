@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <h1>Movies From IMDb</h1>
+  <p class="text-info">Search for a movie title and select the title for more details.</p>
+  <form class="form-inline" role="search">
+    <div class="form-group">
+      {{input value=keywords classNames='form-control' placeholder='Search for movies'}}
+    </div>
+    <button class="btn btn-primary" {{action 'search' keywords}}>Search</button>
+  </form>
+</div>

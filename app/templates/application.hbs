@@ -1,0 +1,30 @@
+<header role="banner">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        {{link-to 'Movies' 'application' classNames='navbar-brand'}}
+      </div>
+      <form class="navbar-form navbar-right">
+        {{input value=keywords classNames='form-control' placeholder='Search for movies'}}
+        <button class="btn btn-primary" {{action 'search' keywords}}>Search</button>
+      </form>
+    </div>
+  </nav>
+</header>
+<div class="container-fluid" role="main">
+  <div class="row">
+    {{outlet}}
+  </div>
+</div>
+<footer class="navbar navbar-default navbar-fixed-bottom" role="contentinfo">
+  <div class="container-fluid">
+    <div class="navbar-inner">
+      <ul class="nav navbar-nav">
+        <li><a href="https://github.com/ttdonovan/emberjs-movies" target="_blank">View Source on GitHub</a></li>
+      </ul>
+      <p class="navbar-right navbar-text text-muted">
+        <small>This site is not endorsed by or affiliated with IMDb.com</small>
+      </p>
+    </div>
+  </div>
+</footer>

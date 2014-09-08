@@ -1,27 +1,54 @@
-# Movies app built with Ember.js and Ember Data
+# 'Movies' an app build with Ember.js and Ember CLI
 
-An example application built with [Ember.js](http://emberjs.com/) and [Ember Data](http://emberjs.com/guides/models/)
-using the [Basic Adapter](http://emberjs.com/blog/2013/03/22/stabilizing-ember-data.html)
-and the [The Open Movie Database API](http://www.omdbapi.com/).
+This is an example application built with [Ember.js](http://emberjs.com/)
+and [Ember CLI](http://www.ember-cli.com/)
+and the [The Open Movie Database API](http://www.omdbapi.com/). The goal
+of the project is to explore best practises for building an Ember appliation.
+Review the `CHANGELOG.md` for detailed journal entries of changes.
 
-## Usage
+## Prerequisites
 
-    $ bin/server
-    $ open http://localhost:3000
+You will need the following things properly installed on your computer.
 
-## References
+* [Git](http://git-scm.com/)
+* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+* [Ember CLI](http://www.ember-cli.com/)
 
-* Many thanks to [Ember Data and the Meetup API](http://blog.mrloop.com/blog/2013/04/07/ember-data-and-the-meetup-api/) for the **Sync Object**
-* Simple example of **Master/Detail Views** [Master/Detail Views with Ember.js](http://broadcastingadam.com/2013/03/master-detail-views-with-ember/)
+## Installation
 
-## Debugging
+* `git clone https://github.com/ttdonovan/emberjs-movies.git` this repository
+* change into the new directory
+* `npm install`
+* `bower install`
 
-* App.Router.router.recognizer.names
+## Running / Development
 
-## TODOs
+* `ember server`
+* Visit your app at http://localhost:4200.
 
-* added an example of best practices with modal windows
-* add an example of best practices with pagination
-* add an example of spinner for $.ajax requests
-* is it possible to cache App.Movie using the 'response' property
-* make app fail gracefully if sending a bad URL i.e. /#/movies/foo/bar
+### Code Generators
+
+Make use of the many generators for code, try `ember help generate` for more details
+
+### Running Tests
+
+* `ember test`
+* `ember test --server`
+
+### Building
+
+* `ember build` (development)
+* `ember build --environment production` (production)
+
+### Deploying
+
+Specify what it takes to deploy your app.
+
+## Further Reading / Useful Links
+
+* ember: http://emberjs.com/
+* ember-cli: http://www.ember-cli.com/
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
